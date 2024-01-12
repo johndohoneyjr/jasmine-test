@@ -24,6 +24,7 @@ jobs:
         uses: dorny/test-reporter@v1
         if: always()
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            token: ${{ secrets.MY_TOKEN }}
+            name: 'Test Results'
             reporter: 'jest-junit'
-            test_results: 'junit-results/*.xml'
+            path: 'junit-results/*.xml'
