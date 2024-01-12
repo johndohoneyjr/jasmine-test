@@ -19,3 +19,11 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Publish Test Results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            reporter: 'jest-junit'
+            test_results: 'junit-results/*.xml'

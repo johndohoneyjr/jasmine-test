@@ -9,5 +9,13 @@
   "env": {
     "stopSpecOnExpectationFailure": false,
     "random": true
-  }
+  },
+    "reporters": [
+      {
+        "name": "jasmine-reporters#JUnitXmlReporter",
+        "options": {
+          "savePath": "junit-results"
+        }
+      }
+    ]
 }
