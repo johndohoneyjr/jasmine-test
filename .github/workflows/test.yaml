@@ -20,11 +20,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Publish Test Results
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-            token: ${{ secrets.MY_TOKEN }}
-            name: 'Test Results'
-            reporter: 'jest-junit'
-            path: 'junit-results/*.xml'
+    #   - name: Publish Test Results
+    #     uses: dorny/test-reporter@v1
+    #     if: always()
+    #     with:
+    #         token: ${{ secrets.MY_TOKEN }}
+    #         name: 'Test Results'
+    #         reporter: 'jest-junit'
+    #         path: 'junit-results/*.xml'
